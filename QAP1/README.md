@@ -1,7 +1,7 @@
 # QAP1 - Password Generator
 - Completed September 2024
 
-# Set up password generater
+# Set up password generator
 - Create a function to generate the password & define the allowed characters
 - Set the password default to be lowercase letters, as instructed
 - Set password to "", so when generated, it will select any random characters based on your entry
@@ -19,4 +19,4 @@
 - Define a default option: Meaning if any flag entered is not one from above, throw an error message
 
 # Generate the password
-- Open terminal, path to your folder, enter (for example): "node password-generator --length 8 --symbols -numbers". This will generate a password with 8 char, symbols and numbers.
+- Open terminal, path to your folder, enter (for example): "node password-generator --length 8 --symbols --numbers". This will generate a password with 8 char, symbols and numbers.
