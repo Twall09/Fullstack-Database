@@ -9,6 +9,10 @@ function generatePassword(length, options) {
   const lowerCase = "abcdefghijklmnopqrstuvwxyz";
   const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const numbers = "0123456789";
+symbol-option
+
+  const symbols = "!@#$%^&*()_+[]{}|;:,.<>?-";
+QAP1-Initial-Commit
 
   let characters = lowerCase; // sets passwords to default lowercase
 
