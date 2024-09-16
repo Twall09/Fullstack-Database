@@ -18,4 +18,5 @@
 - Provide a case for each argument and flag options, so when called, the system knows what to generate.
 - Define a default option: Meaning if any flag entered is not one from above, throw an error message
 
-# Open terminal, path to your folder, enter (for example): "node password-generator --length 8 --symbols -numbers". This will generate a password with 8 char, symbols and numbers.
+# Generate the password
+- Open terminal, path to your folder, enter (for example): "node password-generator --length 8 --symbols -numbers". This will generate a password with 8 char, symbols and numbers.
