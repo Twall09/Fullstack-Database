@@ -1,0 +1,14 @@
+{
+  "name": "text-statistics",
+  "version": "1.0.0",
+  "description": "Provides statistics on the text passed via the CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "text-statistics": "./index.js"
+  },
+  "author": "Tyler Wall",
+  "license": "MIT"
+}

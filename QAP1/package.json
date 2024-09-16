@@ -1,0 +1,15 @@
+{
+  "name": "qap1-password-generator-cli",
+  "version": "1.0.0",
+  "description": "Generating random passwords for users that includes certain lengths, numbers, symbols, & upper/lower case letters",
+  "main": "password-generator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "QAP1": "./password-generator"
+  },
+  "keywords": [],
+  "author": "Tyler Wall",
+  "license": "MIT"
+}
