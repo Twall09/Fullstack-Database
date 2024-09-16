@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const process = require("node:process");
+const symbols = require("./symbols");
 
 // function to generate password and the allowed characters
 // Implementing all 3 customizable features
@@ -8,7 +9,6 @@ function generatePassword(length, options) {
   const lowerCase = "abcdefghijklmnopqrstuvwxyz";
   const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const numbers = "0123456789";
-  const symbols = "!@#$%^&*()_+[]{}|;:,.<>?";
 
   let characters = lowerCase; // sets passwords to default lowercase
 
