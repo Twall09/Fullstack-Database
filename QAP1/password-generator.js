@@ -8,7 +8,7 @@ function generatePassword(length, options) {
   const lowerCase = "abcdefghijklmnopqrstuvwxyz";
   const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const numbers = "0123456789";
-  const symbols = "!@#$%^&*()_+[]{}|;:,.<>?";
+  const symbols = "!@#$%^&*()_+[]{}|;:,.<>?-";
 
   let characters = lowerCase; // sets passwords to default lowercase
 
