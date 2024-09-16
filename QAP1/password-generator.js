@@ -47,7 +47,7 @@ function helpMessage() {
         --help          Show help message
     
     Example:
-         password-generator --length 8 --symbols -numbers
+         node password-generator --length 8 --symbols -numbers
         ^ This should generator your desired password
          `);
 }
