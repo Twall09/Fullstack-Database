@@ -1,0 +1,18 @@
+{
+  "name": "user-management",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "author": "Matthew English",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/pg": "^8.11.10",
+    "express": "^4.21.1",
+    "pg": "^8.13.1"
+  }
+}
