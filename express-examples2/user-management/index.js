@@ -69,30 +69,40 @@ app.post("/users", async (req, res) => {
 });
 
 // Endpoint to update a user
-app.put("/users/:id", (req, res) => {
+app.put("/users/:id", async (req, res) => {
   const { id } = req.params;
   const { name, email } = req.body;
-  const userIndex = users.findIndex((user) => user.id === parseInt(id));
 
-  if (userIndex === -1) {
-    return res.status(404).send("User not found");
+  if (!name || name.length === 0) {
+    return res.status(400).send("Error: Name is invalid");
+  }
+  if (!email || email.length === 0) {
+    return res.status(400).send("Error: Email invalid");
   }
 
-  users[userIndex] = { ...users[userIndex], name, email };
-  res.json(users[userIndex]);
+  try {
+    const result = await pool.query(
+      `UPDATE users SET name = $1, email = $2 WHERE id = $3`,
+      [name, email, id]
+    );
+
+    return res.status(200).json(result.rows);
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send("Server error");
+  }
 });
 
 // Endpoint to delete a user
-app.delete("/users/:id", (req, res) => {
+app.delete("/users/:id", async (req, res) => {
   const { id } = req.params;
-  const userIndex = users.findIndex((user) => user.id === parseInt(id));
-
-  if (userIndex === -1) {
-    return res.status(404).send("User not found");
+  try {
+    await pool.query(`DELETE FROM users WHERE id = $1 RETURNING *`, [id]);
+    return res.status(204).send();
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send("Server error");
   }
-
-  users.splice(userIndex, 1);
-  res.status(204).send();
 });
 
 createUsersTable().then(() =>
